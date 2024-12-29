@@ -1,0 +1,733 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+#home{
+  animation: animate-bg 8s ease infinite; /* Infinite animation */
+}
+/* Keyframes for background animation */
+@keyframes animate-bg {
+  0% {
+      background-position: 0% 50%; /* Start position */
+  }
+  50% {
+      background-position: 100% 50%; /* Midpoint (scroll horizontally) */
+  }
+  100% {
+      background-position: 0% 50%; /* End position */
+  }
+}
+.navigation{
+    border-radius: 20px;
+    background-image: linear-gradient(45deg, #3498db, #038238); /* Gradient from blue to green */
+    margin-top:5px;
+    padding:1.2%;
+    margin: 7px 15px 7px 15px;
+}
+.navigation ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 160px
+}
+.navigation ul li a {
+    text-decoration: none;
+    color: rgb(242, 242, 242);
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+    font-size: 16px;
+  }
+  
+  .circle {
+    width: 300px; /* Diameter */
+    height: 300px; /* Diameter */
+    background-color: #2E86AB; /* Fill color */
+    border: 5px dashed #2E86AB; /* Dashed border */
+    border-radius: 50%; /* Makes it circular */
+    position: absolute;
+    top: 50%; /* Vertically center */
+    right: 90px; /* Position 20px from the right edge */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    box-shadow: 0 0 20px 10px rgba(151, 185, 248, 0.922); /* Increased shadow effect */
+
+
+    animation: zoom-out 3s ease-in-out infinite;
+  }
+  .dashed-circle {
+    width: 350px; /* Circle diameter */
+    height: 350px;
+    border: 3px solid #2E86AB; /* Dashed border */
+    border-radius: 50%; /* Makes it circular */
+    display: inline-block; /* Ensures proper sizing */
+    position: absolute; /* Allows positioning within the container */
+    top: 50%; /* Vertically centers it */
+    right: 45px; /* Aligns it to the right edge */
+    transform: translateY(-50%); /* Adjusts for perfect vertical centering */
+
+   
+    animation: zoom-out 3s ease-in-out infinite, change-color 3s ease-in-out infinite;
+    }
+    .overlap-image {
+        width: 500px; /* Adjust size to fit inside the circle */
+        height: 500px;
+        border-radius: 50%; /* Makes the image circular */
+        position: absolute; /* Positions the image within the dashed circle */
+        top: 50%; /* Vertically centers it */
+        right: -100px; /* Aligns it to the right edge */
+        transform: translateY(-50%); /* Ensures the image fits well within the circular area */
+
+        animation: zoom-out 3s ease-in-out infinite;
+      }
+      @keyframes zoom-out {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    /* Keyframes for color-changing effect on dashed circle */
+    @keyframes change-color {
+        0% {
+            border-color: #035718;
+        }
+        50% {
+            border-color: #08b943;
+        }
+        100% {
+            border-color: #20dc87;
+        }
+    }
+
+      .hello-text {
+        font-size: 30px;
+        font-weight: bold;
+        color: #003B70;
+        margin-bottom: 10px;
+        padding-top: 11%; /* Vertically centers it */
+        padding-left: 10%;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+      }
+      @keyframes shiftIn {
+        0% {
+            opacity: 0; /* Invisible at the start */
+            transform: translateX(-30px); /* Start from the left */
+        }
+        100% {
+            opacity: 1; /* Fully visible at the end */
+            transform: translateX(0); /* End at the original position */
+        }
+    }
+      
+      .main-heading {
+        font-size: 50px;
+        line-height: 1.4;
+        color: #333;
+        margin: 0 0 20px 0;
+        padding-left: 10%;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+
+      }
+      @keyframes shiftIn {
+        0% {
+            opacity: 0; /* Invisible at the start */
+            transform: translateX(-30px); /* Start from the left */
+        }
+        100% {
+            opacity: 1; /* Fully visible at the end */
+            transform: translateX(0); /* End at the original position */
+        }
+    }
+      .main-heading .highlight {
+        color: #FF8C00; /* Orange color for highlight */
+        font-weight: bold;
+      }
+      
+      
+      .download-button {
+        display: block;
+        background-color: #FF8C00;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 150px; /* Set a fixed width */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+      }
+      
+      
+      .download-button:hover {
+        background-color: #e57d00;
+      }
+      #aboutme{
+        background-color: #2E86AB; /* Blue background */
+        padding: 40px;
+        margin-top: 250px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Vertically center content */
+        align-items: center; /* Horizontally center content */
+        min-height: 700px; /* Set a minimum height for the section */
+        text-align: center; /* Center-align text horizontally */* Optional: rounded corners */
+        animation: gradientBackground 5s ease-in-out infinite, blurEffect 5s ease-in-out infinite;
+
+      }
+      
+      #aboutme h2{
+        color: #ffff;
+        text-align: center;
+        margin-top: -30.2%;
+        font-size: 40px;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+    }
+    @keyframes shiftIn {
+      0% {
+          opacity: 0; /* Invisible at the start */
+          transform: translateX(-30px); /* Start from the left */
+      }
+      100% {
+          opacity: 1; /* Fully visible at the end */
+          transform: translateX(0); /* End at the original position */
+      }
+  }
+    #aboutme p{
+        font-size:23px;
+        margin-top: 0.5%;
+        animation: fadeInUp 2s ease-out forwards; /* Apply the animation */
+    }
+    @keyframes fadeInUp {
+      0% {
+          opacity: 0; /* Invisible at the start */
+          transform: translateY(30px); /* Start position is below */
+      }
+      100% {
+          opacity: 1; /* Fully visible at the end */
+          transform: translateY(0); /* End at the original position */
+      }
+  }
+    .rectangle-left,
+.rectangle-right {
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  background-color: #4d94b3cc; /* Blue color for rectangles */
+  border: 2px solid white; /* White border */
+  border-radius: 20px; /* Optional: Rounded corners */
+
+}
+
+.rectangle-left {
+ width: 690px;
+ height: 400px;
+  top: 140%; /* Vertically center */
+  left: 50px; /* Place outside the left boundary */
+  transform: translateY(-50%); /* Adjust for centering */
+}
+
+.rectangle-right {
+ width: 690px;
+ height: 400px;
+  top: 140%; /* Vertically center */
+  right: 50px; /* Place outside the right boundary */
+  transform: translateY(-50%); /* Adjust for centering */
+}
+.rectangle-left h3,
+.rectangle-right h3 {
+  color: #f7cb95; /* Text color */
+  font-size: 16px; /* Font size for the heading */
+  text-align: left; /* Align text to the left */
+  padding-top: 40px ;
+  padding-left:30px;
+  margin: 0; /* Remove default margin */
+  font-size:20px;
+}
+.rectangle-left ul {
+    list-style-type: circle; /* Circle bullets */
+    padding-top: 30px;
+    padding-left: 50px; /* Indent for bullets */
+    margin: 0; /* Remove margin */
+    text-align: left; /* Align list content to the left */
+    font-size: 18px;
+
+  }
+  
+  .rectangle-left li strong {
+    font-size: 30px; /* Bold and slightly larger for degree titles */
+  }
+  
+  .rectangle-left li span {
+    font-size: 20px; /* Smaller font for years */
+    color: #eee; /* Slightly lighter white for distinction */
+    display: block; /* Places the year on a new line */
+  }
+  
+  .rectangle-left li::marker {
+    color: white; /* Match bullet color with text */
+  }
+  .rectangle-right ul {
+    list-style-type: circle; /* Circle bullets */
+    padding-top: 30px;
+    padding-left: 40px; /* Indent for bullets */
+    margin: 0; /* Remove margin */
+  }
+  
+  .rectangle-right li {
+    margin-bottom: 10px; /* Space between items */
+    color: white; /* White text for bullets */
+    font-size: 20px; /* Font size for the list items */
+    text-align: left;
+  }
+  /* Basic setup for the rectangles */
+.rectangle-left, .rectangle-right {
+  opacity: 0;  /* Start with the elements invisible */
+  transform: translateX(-100%);  /* Start off-screen for rectangle-left */
+  animation: slideIn 1.5s ease-out forwards;  /* Apply the animation */
+}
+
+.rectangle-right {
+  transform: translateX(100%);  /* Start off-screen to the right for rectangle-right */
+  animation-delay: 0.5s;  /* Delay animation for rectangle-right */
+}
+
+/* Animation for sliding in from left and right */
+@keyframes slideIn {
+  from {
+      opacity: 0;  /* Start with no opacity */
+      transform: translateX(-100%);  /* Slide from the left */
+  }
+  to {
+      opacity: 1;  /* End with full opacity */
+      transform: translateX(0);  /* End in the normal position */
+  }
+}
+
+/* Add a fade-in effect for the list items */
+.rectangle-left ul li, .rectangle-right ul li {
+  opacity: 0;  /* Start with no opacity */
+  animation: fadeIn 1s ease-in forwards;  /* Apply fade-in animation */
+}
+
+/* Apply a staggered effect for each list item */
+.rectangle-left ul li:nth-child(1), .rectangle-right ul li:nth-child(1) {
+  animation-delay: 1.5s;  /* Delay for the first list item */
+}
+.rectangle-left ul li:nth-child(2), .rectangle-right ul li:nth-child(2) {
+  animation-delay: 2s;  /* Delay for the second list item */
+}
+.rectangle-left ul li:nth-child(3), .rectangle-right ul li:nth-child(3) {
+  animation-delay: 2.5s;  /* Delay for the third list item */
+}
+/* Add more delays for each list item if needed */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;  /* Start with no opacity */
+  }
+  to {
+      opacity: 1;  /* Fade in to full opacity */
+  }
+}
+
+  #experience{
+        padding: 40px;
+        margin-top: 250px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Vertically center content */
+        align-items: center; /* Horizontally center content */
+        min-height: 400px; /* Set a minimum height for the section */
+        text-align: center; /* Center-align text horizontally */* Optional: rounded corners */
+  }
+  .circle1 {
+    width: 400px; /* Diameter */
+    height: 400px; /* Diameter */
+    background-color: #2E86AB; /* Fill color */
+    border: 5px dashed #2E86AB; /* Dashed border */
+    border-radius: 50%; /* Makes it circular */
+    position: absolute;
+    margin-top: -250px;
+    left: 70px; /* Position 20px from the right edge */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    box-shadow: 0 0 20px 10px rgba(151, 185, 248, 0.922); /* Increased shadow effect */
+
+
+  }
+  .solid-circle {
+    width: 450px; /* Circle diameter */
+    height: 450px;
+    border: 3px solid #024e0e; /* Dashed border */
+    border-radius: 50%; /* Makes it circular */
+    display: inline-block; /* Ensures proper sizing */
+    position: absolute; /* Allows positioning within the container */
+    margin-top: -240px;
+    left: 80px; /* Aligns it to the right edge */
+    transform: translateY(-50%); /* Adjusts for perfect vertical centering */
+    }
+    /* Shadow Moving Animation */
+@keyframes shadowMove {
+  0% {
+      transform: translateX(0) translateY(0);
+      box-shadow: 0px 0px 20px ;
+  }
+  50% {
+      transform: translateX(20px) translateY(20px);
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+      transform: translateX(0) translateY(0);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+.circle1, .solid-circle {
+  animation: shadowMove 2s infinite ease-in-out;
+}
+
+    
+    .overlap-image2 {
+        width: 400px; /* Adjust size to fit inside the circle */
+        height: 460px;
+        border-radius: 50%; /* Makes the image circular */
+        position: absolute; /* Positions the image within the dashed circle */
+        margin-top: 250px;
+        left: 90px; /* Aligns it to the right edge */
+        transform: translateY(-50%); /* Ensures the image fits well within the circular area */
+      }
+      #experience h2{
+        font-size: 40px;
+        margin-top:-20.2%;
+        text-align: left;
+        margin-left: 10.20%;
+        margin-right: 9%;
+        color: #e57d00;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+
+      }
+      @keyframes shiftIn {
+        0% {
+            opacity: 0; /* Invisible at the start */
+            transform: translateX(-30px); /* Start from the left */
+        }
+        100% {
+            opacity: 1; /* Fully visible at the end */
+            transform: translateX(0); /* End at the original position */
+        }
+    }
+      #experience h4{
+        font-size: 20px;
+        text-align: left;
+        margin-left:-7.5%;
+        margin-top: 6px;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+
+      }
+      @keyframes shiftIn {
+        0% {
+            opacity: 0; /* Invisible at the start */
+            transform: translateX(-30px); /* Start from the left */
+        }
+        100% {
+            opacity: 1; /* Fully visible at the end */
+            transform: translateX(0); /* End at the original position */
+        }
+    }
+      #experience p{
+        color:#f9d805;
+        font-size: 20px;
+        margin-left:8%;
+        margin-top: -14.0px;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+
+      }
+      @keyframes shiftIn {
+        0% {
+            opacity: 0; /* Invisible at the start */
+            transform: translateX(-30px); /* Start from the left */
+        }
+        100% {
+            opacity: 1; /* Fully visible at the end */
+            transform: translateX(0); /* End at the original position */
+        }
+    }
+      .experience-list {
+        list-style-type: circle; /* Circle bullets */
+        padding-left: 45%; /* Space for the bullets */
+        margin: 0; /* Remove default margin */
+        font-size: 19px; /* Set font size for list items */
+        color: #555; /* Slightly lighter text color */
+        text-align: left;
+        animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+
+    }
+    
+    
+    .experience-list li {
+        margin-bottom: 15px; /* Space between list items */
+        line-height: 1.5; /* Better readability */
+    }
+   #Project{
+    background-image: url('C:/Users/Anushrii Golde/Downloads/Wave Point Triangle Round Geometric Background Wallpaper Image For Free Download - Pngtree.jpg');
+    background-size: cover; /* Ensure the background image covers the entire section */
+    width: 100%;
+    padding-bottom: 30px;
+    margin-top: -1%;
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+   #Project h2{
+    color: #e57d00;   
+    text-align: center;
+    font-size: 40px;
+    padding-top:3%;
+    animation: shiftIn 1.5s ease-out forwards; /* Apply the animation */
+  }
+  @keyframes shiftIn {
+    0% {
+        opacity: 0; /* Invisible at the start */
+        transform: translateX(-30px); /* Start from the left */
+    }
+    100% {
+        opacity: 1; /* Fully visible at the end */
+        transform: translateX(0); /* End at the original position */
+    }
+  }
+  /* Container Styling */
+.project-box {
+  display: flex;
+  flex-wrap: wrap; /* Allows boxes to wrap to the next row */
+  justify-content: space-around; /* Space between the boxes */
+  gap: 25px; /* Space between boxes */
+  padding-left: 0%; /* Adds padding to the left */
+  padding-top: 3%;
+  
+}
+
+/* Box Styling */
+.box {
+  width: 450px; /* Box width */
+  height: 400px; /* Box height */
+  background-color: #f8fbfc; /* Default background color */
+  border: 2px solid rgb(189, 215, 241); /* White border */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: box shadow */
+  transition: transform 0.3s ease-in-out; /* Optional: hover effect */
+  
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.box-heading {
+  margin-top:1%;
+  font-size: 20px;
+  margin-bottom: 10px; /* Space between heading and image */
+  color: #5386ff;
+}
+
+.box-image {
+  margin-top: -10%;
+  width: 80%; /* Adjust the image width (optional) */
+  height: auto; /* Maintain image aspect ratio */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+}
+
+/* Hover Effect */
+.box:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.box-heading1 {
+  margin-top: -10px;
+  font-size: 20px;
+  margin-bottom: 3px; /* Space between heading and image */
+  color: #5386ff;
+}
+
+.box-image1 {
+  margin-top: -5%;
+  width: 140%; /* Adjust the image width (optional) */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+/* Hover Effect */
+.box:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.box-heading2 {
+  margin-top:7%;
+  font-size: 20px;
+  margin-bottom: 10px; /* Space between heading and image */
+  color: #5386ff;
+}
+
+.box-image2{
+  margin-top: 8%;
+  width: 80%; /* Adjust the image width (optional) */
+  height: auto; /* Maintain image aspect ratio */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+}
+
+/* Hover Effect */
+.box:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+   /* Section Styling */
+  #Contactme {
+  padding-top: 9%;
+  padding-left: 2%;
+  padding-right: 2%;
+  position: relative; /* Enable positioning of overlay elements */
+  height: 600px; /* Adjust the height based on your image */
+  overflow: hidden; /* Prevent content from overflowing the section */
+  align-items: center;
+}
+
+.container {
+  padding-left: 8%;
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 1200px;
+  height:900px;
+}
+
+.contact-form {
+  flex: 2;
+  padding: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-info {
+  flex: 1;
+  background: #2E86AB;
+  height: 500px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+/* Responsive styles */
+/* For tablets */
+@media (max-width: 1024px) {
+  .circle,
+  .dashed-circle,
+  .overlap-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main-heading {
+    font-size: 40px;
+  }
+
+  .hello-text {
+    font-size: 24px;
+  }
+
+  .navigation ul {
+    gap: 100px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .circle,
+  .dashed-circle,
+  .overlap-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .main-heading {
+    font-size: 30px;
+  }
+
+  .hello-text {
+    font-size: 18px;
+    padding-left: 5%;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation ul li {
+    text-align: center;
+  }
+}
